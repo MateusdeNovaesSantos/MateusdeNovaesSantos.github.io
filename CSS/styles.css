@@ -91,7 +91,7 @@
 
 #email-container ion-icon,
 #email-container a {
-    flex: 1 1 1;
+    flex: 0 0 1;
 }
 
 #email-container a {
@@ -171,7 +171,6 @@
     flex: 1 1 33%;
     max-width: 33%;
     margin-bottom: 35px;
-    margin-top: 25px;
 }
 
 .skills-title {
