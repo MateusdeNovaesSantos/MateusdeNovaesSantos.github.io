@@ -1,79 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifólio Mateus Novaes</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;0,900;1,300;1,700&display=swap" rel="stylesheet">
-    <!-- Dev Icon Fonts -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-    <!-- CSS do Projeto -->
-    <link rel="stylesheet" href="CSS/styles.css">
+    <title>Mateus Novaes | Protifólio Digital</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <main id="container">
-        <aside id="bio-container">
-            <h2>Mateus de Novaes Santos</h2>
-            <img id="bio-image" src="img\img_Minha_1x1.jpg" alt="Mateus Novaes">
-            <p>Olá, aqui estou eu pode me chamar de Mateus estudo <span class="highlight">Data Analytics</span>.</p>
-            <p id="welcome-text">Quer me conhecer?</p>
-            <ul id="social-container">
-                <li><a href="https://www.facebook.com/mateus.denovaessantos/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
-                <li><a href="https://www.linkedin.com/in/mateus-de-novaes-santos-190141236/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-                <li><a href="https://www.instagram.com/mateus.denovaes/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
-            </ul>
-            <div id="email-container">
-                <ion-icon name="mail-outline"></ion-icon><a href="mailto:emw.mateus@gmail.com">emw.mateus@gmail.com</a>
-            </div>
-        </aside>
-        <section id="about-container">
-            <h1 id="name">Mateus Novaes</h1>
-            <p id="title"><span class="highlight">Estudando Data Analytics</span></p>
-            <p class="descripition"></p>
-            <p class="descripition"></p>
-            <a href="https://github.com/MateusdeNovaesSantos" id="btn-projects"><ion-icon name="share-social-outline"></ion-icon><span>Ver Projetos</span></a>
-            <h2 id="skills-section-title">Minhas Skills</h2>
-            <p class="descripition">Conheça as tecnologias que domino e estou estudando:</p>
-            <div id="skills-container">
-                <div class="skills-box">
-                    <p class="skills-title">Front-end</p>
-                    <i class="devicon-html5-plain colored"></i>
-                    <i class="devicon-css3-plain colored"></i>
-                    <i class="devicon-javascript-plain colored"></i>
-                </div>
-                <div class="skills-box">
-                    <p class="skills-title">Back-end</p>
-                    <i class="devicon-nodejs-plain colored"></i>
-                    <i class="devicon-python-plain colored"></i>
-                    <i class="devicon-java-plain colored"></i>
-                </div>
-                <div class="skills-box">
-                    <p class="skills-title">Databases</p>
-                    <i class="devicon--plain colored"></i>
-                    <i class="devicon--plain colored"></i>
-                    <i class="devicon--plain colored"></i>
-                </div>
-                <div class="skills-box">
-                    <p class="skills-title">Front-end Frameworks</p>
-                    <i class="devicon-react-plain colored"></i>
-                    <i class="devicon-vuejs-plain colored"></i>
-                </div>
-                <div class="skills-box">
-                    <p class="skills-title">Back-end Frameworks</p>
-                </div>
-                <div class="skills-box">
-                    <p class="skills-title">Tools</p>
-                    <i class="devicon-linux-plain colored"></i>
-                </div>
-            </div>
-        </section>
-    </main>
 
-    <!-- IonIcons -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<body>
+
+    <!-- sticky-header -->
+    <header class="sticky-header hidden">
+        <div class="sticky-header-container">
+            <h2 class="sticky-name">MN</h2>
+            <button class="hamburger-menu">☰</button>
+            <nav class="sticky-social-links">
+                <a href="https://github.com/MateusdeNovaesSantos" target="_blank">GitHub</a>
+                <a href="https://wwww.linkedin.com/in/mateus-novaes" target="_blank">LinkedIn</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- mobile nav quando abrir o hamburger -->
+    <nav class="mobile-menu">
+        <div class="mobile-social-links">
+            <a href="https://github.com/MateusdeNovaesSantos" target="_blank">GitHub</a>
+            <a href="https://wwww.linkedin.com/in/mateus-novaes" target="_blank">LinkedIn</a>
+        </div>
+        <button id="mobile-theme-toggle" class="theme-toggle-btn">Dark Mode</button>
+    </nav>
+
+    <!-- header principal -->
+    <header class="header">
+        <div class="header-container">
+            <div class="profile-info">
+                <img src="img/profile.png" alt="Minha foto de perfil" class="profile-photo">
+                <div>
+                    <h1 class="name">Mateus Novaes</h1>
+                    <p class="title">Full-Stack | Data Science</p>
+                </div>
+            </div>
+            <nav class="social-links">
+                <a href="https://github.com/MateusdeNovaesSantos" target="_blank">GitHub</a>
+                <a href="https://wwww.linkedin.com/in/mateus-novaes" target="_blank">LinkedIn</a>
+                <button id="theme-toggle" class="theme-toggle-btn">Dark Mode</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About section -->
+    <section class="about-me">
+        <div class="about-me-container">
+            <h2 class="section-title">Sobre mim</h2>
+            <div class="about-me-content">
+                <p>
+                    Como desenvolvedor front-end de 21 anos, estou focado em construir experiências digitais que não
+                    apenas funcionam, mas que também encantam. Minha jornada, moldada por um passado no universo dos
+                    games, me deu uma disciplina única: a busca por recompensas claras e mensuráveis. Hoje, canalizo
+                    essa energia para o desenvolvimento de software, onde cada micro-projeto e nova habilidade dominada
+                    é uma vitória.
+                </p>
+                <p>
+                    Sou formado em Ciência da Computação e estou sempre em busca de aplicar meu conhecimento em projetos
+                    com propósito. Acredito que o aprendizado é mais eficaz quando é ativo e aplicado, e por isso,
+                    prefiro construir em vez de apenas observar. Atualmente, estou expandindo minhas habilidades em
+                    Next.js e Tailwind, sempre com o objetivo de construir uma carreira sólida e alcançar a
+                    independência financeira.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills">
+        <div class="skills-container">
+            <h2 class="section-title">Habilidades</h2>
+            <div class="skills-content">
+                <div class="skills-category">
+                    <h3>Front-end</h3>
+                    <ul class="skills-list">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript/TypeScript</li>
+                        <li>React/Next.js</li>
+                        <li>Tailwind + Shadcn/ui</li>
+                    </ul>
+                </div>
+                <div class="skills-category">
+                    <h3>Back-end & Outras</h3>
+                    <ul class="skills-list">
+                        <li>Node/Express</li>
+                        <li>MySQL/Prisma</li>
+                        <li>Python/Jupyter Notebook</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="projects">
+        <div class="projects-container">
+            <h2 class="section-title">Projetos</h2>
+            <div class="projects-grid">
+
+                <!-- ats-curriculo-next -->
+                <div class="project-card">
+                    <h3>Gerador de Currículo Otimizado para ATS</h3>
+                    <p class="project-description">
+                        Uma aplicação front-end desenvolvida para gerar currículos otimizados para sistemas de rastreamento de candidatos (ATS).
+                    </p>
+                    <p class="project-tech">Stack: React/Next.js | TypeScript | Tailwind + Shadcn/ui | react-pdf/renderer</p>
+                    <div class="project-links">
+                        <a href="https://github.com/MateusdeNovaesSantos/ats-curriculo-next" target="_blank" class="btn">Código</a>
+                        <a href="https://ats-curriculo-next.vercel.app/" target="_blank" class="btn">Ver Projeto</a>
+                    </div>
+                </div>
+
+                <!-- brawlhalla-tracker -->
+                <div class="project-card">
+                    <h3>Gerenciador de Informações Brawlhalla</h3>
+                    <p class="project-description">
+                        Aplicação full-stack para gerenciar a base de dados de cores e registros de partidas do jogo Brawlhalla.
+                    </p>
+                    <p class="project-tech">Stack: React/Next.js/TypeScript | Tailwind + Shadcn/ui | Node/Express/TypeScript | MySQL/Prisma</p>
+                    <div class="project-links">
+                        <a href="https://github.com/MateusdeNovaesSantos/brawlhalla-tracker" target="_blank" class="btn">Código</a>
+                        <a href="#" class="btn disable">Ver Projeto</a>
+                    </div>
+                </div>
+
+                <!-- analise-covid-sp -->
+                <div class="project-card">
+                    <h3>Análise de Dados da COVID-19 em São Paulo</h3>
+                    <p class="project-description">
+                        Projeto de análise e pesquisa de dados da COVID-19 usando Python e Jupyter Notebook, com foco na limpeza de dados.
+                    </p>
+                    <p class="project-tech">Stack: Python | Jupyter Notebook | MySQL</p>
+                    <div class="project-links">
+                        <a href="https://github.com/MateusdeNovaesSantos/analise-covid-sp" target="_blank" class="btn">Código</a>
+                        <a href="#" class="btn disable">Ver Projeto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+     <section class="contact">
+        <div class="contact-container">
+            <h2 class="section-title">Contato</h2>
+            <p class="contact-text">
+                Tem alguma ideia de projeto ou oportunidade de carreira?
+                <br>
+                Ficarei feliz em conversar!
+            </p>
+            <div class="contact-links">
+                <a href="mailto:emw.mateus@gmail.com" class="btn">Me envie um e-mail</a>
+                <a href="https://wa.me/5575999120928" target="_blank" class="btn">Me chame no WhatsApp</a>
+            </div>
+        </div>
+     </section>
+
+    <script src="scripts/index.js"></script>
 </body>
+
 </html>
