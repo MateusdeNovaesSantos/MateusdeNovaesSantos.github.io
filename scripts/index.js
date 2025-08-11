@@ -1,30 +1,35 @@
-/* HEADER FIXO */
-
-const mainHeader = document.querySelector('.header');
-const stickyHeader = document.querySelector('.sticky-header');
-const hamburgerMenu = document.querySelector('.hamburger-menu');
-const mobileMenu = document.querySelector('.mobile-menu');
-
-window.addEventListener('scroll', () => {
-    const mainHeaderHeight = mainHeader.offsetHeight;
-
-    if (window.innerHeight >= 768) {
-        if (window.scrollY > mainHeaderHeight) {
-            stickyHeader.classList.add('show');
-        } else {
-            stickyHeader.classList.remove('show');
-        }
-    }
-});
-
-hamburgerMenu.addEventListener('click', () => {
-    mobileMenu.classList.toggle('open');
-});
 
 
-/* SECTION ANIMATION */
+
 
 document.addEventListener('DOMContentLoaded', () => {
+
+    /* HEADER FIXO */
+
+    const mainHeader = document.querySelector('.header');
+    const stickyHeader = document.querySelector('.sticky-header');
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    window.addEventListener('scroll', () => {
+        const mainHeaderHeight = mainHeader.offsetHeight;
+
+        if (window.innerHeight >= 768) {
+            if (window.scrollY > mainHeaderHeight) {
+                stickyHeader.classList.add('show');
+            } else {
+                stickyHeader.classList.remove('show');
+            }
+        }
+    });
+
+    hamburgerMenu.addEventListener('click', () => {
+        mobileMenu.classList.toggle('open');
+    });
+
+
+    /* SECTION ANIMATION */
+
     const sections = document.querySelectorAll('section');
     const options = {
         threshold: 0.4
@@ -46,26 +51,32 @@ document.addEventListener('DOMContentLoaded', () => {
         section.classList.add('hidden');
         observer.observe(section);
     });
-});
 
 
-/* THEME TOGGLE */
+    /* THEME TOGGLE */
 
-const themeToggleBtn = document.getElementById('theme-toggle');
+    const desktopThemeToggleCheckbox = document.getElementById('theme-toggle');
+    const mobileThemeToggleCheckbox = document.getElementById('mobile-theme-toggle');
 
-themeToggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    if (document.body.classList.contains('dark-mode')) {
-        localStorage.setItem('theme', 'dark');
-        themeToggleBtn.textContent = 'Light Mode';
+    const toggleTheme = (isDarkMode) => {
+        document.body.classList.toggle('dark-mode', isDarkMode);
+        localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+        desktopThemeToggleCheckbox.checked = isDarkMode;
+        mobileThemeToggleCheckbox.checked = isDarkMode;
+    };
+
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'dark' ) {
+        toggleTheme(true);
     } else {
-        localStorage.setItem('theme', 'light');
-        themeToggleBtn.textContent = 'Dark Mode';
+        toggleTheme(false);
     }
-});
 
-const currentTheme = localStorage.getItem('theme');
-if (currentTheme === 'dark') {
-    document.body.classList.add('dark-mode');
-    themeToggleBtn.textContent = 'Light Mode';
-}
+    desktopThemeToggleCheckbox.addEventListener('change', (e) => {
+        toggleTheme(e.target.checked);
+    });
+
+    mobileThemeToggleCheckbox.addEventListener('change', (e) => {
+        toggleTheme(e.target.checked);
+    })
+});
